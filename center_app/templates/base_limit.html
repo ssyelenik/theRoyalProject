@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>the Royal Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Sigmar+One&display=swap" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<style>
+    body{font-family: 'Roboto', sans-serif;}
+        .nav-link{
+
+        font-size:1.5rem;
+
+    font-weight:bold;
+        margin-right:20px;
+        }
+
+        .navbar{
+
+        margin-top:25px;
+        }
+
+@media (max-width: 1200px) {
+  .navbar
+    {
+        background-color:gray;
+    }
+}
+@media (max-width: 1200px) {
+  .nav-link{color:white!important;}
+}
+    .special-links{
+    border:1px solid gray!important;
+    border-radius:5%;
+    padding-left:20px!important;
+    width:200px;
+
+    }
+
+#logout{
+    width:130px;
+    }
+
+.tablet {
+  position: relative;
+  width: 600px;
+  height: 750px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.tablet:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.tablet:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.tablet .content {
+  width: 600px;
+  height: 635px;
+  background-color: transparent;
+  margin: -1px;
+}
+
+.flash{
+    position:absolute;
+    width:fit-content;
+    top:150px;
+    left:1050px;
+    background-color:#ce93d8;
+    }
+
+
+    .text-muted{
+    color:#e1bee7!important;
+    }
+    .tablet_inner{
+    margin:40px;
+    }
+        .text-muted{
+    color:#311b92!important;
+    }
+.fa:hover {
+  opacity: 0.7;
+}
+        .course_list{
+    list-style-type:none;
+    border:2px dotted #311b92;
+    padding:20px;
+    margin-top:10;
+    margin-bottom:10;
+    }
+        .page-link{
+    background-color:#311b92;
+    border:1px dotted #e1bee7;
+    color:#e1bee7;
+    }
+    .page-link:hover{
+    background-color:#e1bee7;
+    border:1px dotted #311b92;
+    color:#311b92;
+    }
+    .contact_form_control{
+    font-size:2rem;
+    background-color:transparent!important;
+    color:black!important;
+    }
+
+    @media (max-width: 1200px) {
+   .choose{
+    position:absolute;
+    left:200px;
+    top:1300px;
+    }}
+
+    @media (max-width: 1200px) {
+.courses{
+position:absolute!important;
+left:50px!important;
+top:7450px!important;
+}
+}
+.course-list-style{
+position:absolute;top:0px;left:-85px;height:730px;
+}}
+
+@media (max-width: 1200px) {
+.course-list-style{
+position:absolute;top:165px;left:-85px;width:600px;height:1030px;
+}}
+.course-list-white{
+background-color:white;box-shadow: 30px 30px 30px 30px white;opacity: 0.6;  position: absolute; top: -15px; left: -100px; height: 740px; width: 990px;
+}
+
+@media (max-width: 1200px) {
+.course-list-white{
+height:1100px;
+}}
+
+@media (max-width: 1200px) {
+.one-course{
+width:600px;
+}}
+@media (max-width: 1200px) {
+.classes{
+position:absolute!important;
+left:0px!important;
+top:8700px!important;
+}
+}
+
+.watch{
+    margin-left:-250px;
+    height:900px;
+    width:1500px;
+    }
+
+ @media (max-width: 1200px) {
+    .watch{
+    margin-left:-50px;
+    height:2400px;
+    width:600px;
+    }}
+
+   .watch-white{
+    background-color:white;
+    box-shadow: 30px 30px 30px 30px white;
+    opacity: 0.6;
+    position: absolute;
+    top: 200px;
+    left: -200px;
+    height: 850px;
+    width: 1450px;
+    }
+.admin-button{
+    color:white;
+    background-color:black;
+    border:1px solid black;
+    border-radius:5%;
+    }
+    @media (max-width: 1200px) {
+    .admin-button{
+    color:white;
+    background-color:black;
+    }}
+    @media (max-width: 1200px) {
+    .watch-white{
+    background-color:white;
+    box-shadow: 30px 30px 30px 30px white;
+    opacity: 0.6;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    height: 2350px;
+    width: 550px;
+    }}
+@media (max-width: 1200px) {
+.footer-break{
+position:absolute;
+    top:2700px;
+    left:0px;
+    right:0px;
+}}
+    .contact_form_control:-webkit-autofill,
+contact_form_control:-webkit-autofill:hover,
+contact_form_control:-webkit-autofill:focus,
+contact_form_control:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: black !important;
+}
+        .course_button{
+    background-color:#e1bee7;
+    color:#311b92;
+    }
+$aos-distance: 200px; // It has to be above import
+@import 'node_modules/aos/src/sass/aos.scss';
+
+*{scroll-behavior: smooth;}
+ul#menu li {
+  display:inline!important;
+  margin:10px;
+}
+.cont {
+    overflow:hidden;
+    position:relative;
+}
+.hideMe {
+    -webkit-animation: cssAnimation 15s forwards;
+    animation: cssAnimation 15s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+    .transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+</style>
+</head>
+<body  style="background-size:cover;background-image:url('/static/logo100.png');background-attachment: fixed; background-repeat: no-repeat;">
+
+          <nav class="navbar navbar-expand-xl navbar-light fixed-top ">
+{% if current_user.is_authenticated %}
+
+                  <a class="navbar-brand" style="border:1px dotted gray;" href="#" >HELLO <strong> {{current_user.name.upper()}} </strong></a>
+
+{% endif %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+<div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar" >
+
+              <ul class="navbar-nav " >
+
+                <li class="nav-item active">
+                  <a style="color:gray;" class="nav-link" href="{{url_for('main.index')}}" onmouseover="this.style.background='gray';this.style.color='white';" onmouseout="this.style.background='none';this.style.color='gray';">HOME <span class="sr-only">(current)</span></a>
+                </li>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" style="background:none;  font-color:lightgray;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onmouseover="this.style.background='gray';this.style.color='white';" onmouseout="this.style.background='none';this.style.color='gray';">
+    DIVISIONS
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" role="button"  id="women" href="{{url_for('main.women')}}">Women / Girls'</a>
+    <a class="dropdown-item" role="button" id="men" href="{{url_for('main.men')}}">Men / Boys'</a>
+
+  </div>
+    </li>
+                  <li>&nbsp&nbsp&nbsp&nbsp</li>
+
+
+
+                    {% if current_user.role==3 %}
+                <li class="nav-item">
+              <a class="nav-link " href="{{url_for('main.admin')}}" onmouseover="this.style.background='gray';this.style.color='white';" onmouseout="this.style.background='none';this.style.color='gray';">ADMIN </a>
+            </li>
+               {% endif %}
+{% if current_user.role==3 or current_user.membership_status=="virtual" %}
+                    <li class="nav-item">
+                  <a class="nav-link " id="virtual" href="{{url_for('main.virtual')}}" onmouseover="this.style.background='gray';this.style.color='white';" onmouseout="this.style.background='none';this.style.color='gray';">VIRTUAL</a>
+                </li>
+                    {% endif %}
+                    {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link " id="logout" href="{{url_for('auth.logout')}}" onmouseover="this.style.background='gray';this.style.color='white';" onmouseout="this.style.background='none';this.style.color='gray';">LOGOUT</a>
+                </li>
+{% endif %}
+
+ <li>
+                       <h1> <a href="https://www.facebook.com/theroyalprojectcmd" class="fa fa-facebook"></a>&nbsp
+                           <a href="https://www.instagram.com/theroyalprojectcmd" class="fa fa-instagram"></a></h1>
+                </li>
+
+               </ul>
+</div>
+          </nav>
+
+
+        {% block content %}
+                {% endblock content %}
+
+
+    <!-- Footer -->
+
+
+
+<footer class="page-footer font-small pt-4 footer-break" style="background-color:lightgray;margin-bottom:-50px;width:100%;">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+                <h5 class="text-uppercase">Contact Information</h5>
+        <p>phone 053-763-0853</p>
+          <p>email: theroyalprojectcmd@gmail.com</p>
+
+
+<h1> <a href="https://www.facebook.com/theroyalprojectcmd" class="fa fa-facebook"></a>&nbsp&nbsp&nbsp
+          <a href="https://www.instagram.com/theroyalprojectcmd" class="fa fa-instagram"></a></h1>
+
+<p>Ramat Beit Shemesh, Israel</p>
+
+      </div>
+
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Check us out!</h5>
+
+        <ul class="list-unstyled">
+
+          <li>
+            <a href="{{url_for('main.index')}}" style="text-decoration:none;">Home</a>
+          </li>
+
+          <li>
+            <a href="#!" style="text-decoration:none;">Divisions</a>
+          </li>
+            <ul style="margin-left:20px;" class="list-unstyled">
+                  <li><a href="{{url_for('main.women')}}">Women / Girls</a></li>
+                  <li><a href="{{url_for('main.men')}}">Men / Boys</a></li>
+              </ul>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+
+  <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">For our users:</h5>
+
+        <ul class="list-unstyled">
+        
+            {% if current_user.is_authenticated and current_user.membership_status=="virtual" %}
+          <li>
+            <a href="{{url_for('main.virtual')}}">Virtual</a>
+          </li>
+            {% endif %}
+            {% if not current_user.is_authenticated %}
+          <li>
+            <a href="{{url_for('auth.register')}}">Register</a>
+          </li>
+            {% endif %}
+            {% if current_user.is_authenticated %}
+          <li>
+            <a href="{{url_for('auth.logout')}}">Logout</a>
+          </li>
+            {% endif %}
+            {% if current_user.is_authenticated and current_user.membership_status=="admin"%}
+            <li>
+            <a href="{{url_for('main.admin')}}">Admin</a>
+          </li>
+            {% endif %}
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+
+  <!-- Footer Links -->
+
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="background-color:darkgray;">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> The Royal Project Preforming Ars Center</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+

@@ -1,0 +1,24 @@
+{% include '/partials/header.html' %}
+        <div style="margin-top:30px;">
+{% include '/partials/jumbotron.html' %}
+
+<div class="container" style="margin_bottom:25px;padding-top:70px;">
+    <h1 style="margin-top:25px">View {{current_user.name}}'s Profile:</h1><hr>
+
+        <div>
+            <p>Name: {{current_user.name}}</p>
+        </div>
+        <div class="form-group">
+            <p>Email: {{current_user.email}}</p>
+        </div>
+
+        <div class="form-group">
+            <p>Role: {{role}}</p>
+        </div>
+        <div class="form-group">
+
+        </div>
+
+</div>
+
+{% include '/partials/footer.html' %}

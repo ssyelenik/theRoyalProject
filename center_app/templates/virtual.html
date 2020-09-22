@@ -1,0 +1,116 @@
+{% extends 'base_limit.html' %}
+
+{% block content %}
+
+<div  class="container" style="position:relative;color:black;width:100%;height:1300px;">
+
+
+
+
+<!--*************************VIEW COURSES**************************-->
+<!-- START THE FEATURETTES -->
+<div id="view_courses"></div>
+
+<div style="height:125px;"></div>
+<!--<hr class="featurette-divider">-->
+<h1 style="">Welcome to the Virtual Environment!</h1>
+<hr style="margin-left:-320px;">
+    <div style="margin-left:-250px;margin-right:-250px;" class="row featurette" >
+
+    <div data-aos="fade-right" data-aos-offset="50"
+         data-aos-delay="100"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+         data-aos-anchor-placement="top-center" class="col-md-7">
+
+    <div class="container" style="position:relative;">
+        <div class="course-list-white"></div>
+        <div class="course-list-style">
+            <h3 class="featurette-heading" style="color:black;"> <i class="text-muted">Choose a Class:</i></h3>
+
+
+
+            <form action="" method="POST">
+
+                {% for i in range(start,end) %}
+
+                <ul class="course_list">
+
+                    <li class="lead" >
+                        <h5>Course Name:<i> <strong>{{courses[i].name}}</strong></i>&nbsp<button class="course_button" type="submit" value={{courses[i].id}} name="view_course"><strong>Details</strong></button></h5>
+                    </li>
+                    <li class="lead" >
+                        <p><strong>Course Description: </strong>{{courses[i].description}} </p>
+                    </li>
+            <!--        <li class="lead">
+                        <button class="course_button" type="submit" value={{courses[i].id}} name="view_course"><strong>View Course Details</strong></button>
+                    </li>-->
+
+                </ul>
+
+                {% endfor %}
+
+
+
+            <nav aria-label="Page navigation example" >
+              <ul class="pagination" style="margin-top:-17px;">
+                <li class="page-item"><button name="P" class="page-link">Previous</button></li>
+                <li {% if end<4 %} style="opacity:.6;" {% endif %} class="page-item"><button name="0" class="page-link"  href="#">1</button></li>
+                <li {% if end>3 and end<7 %} style="opacity:.6;" {% endif %} class="page-item"><button name="4" class="page-link"  href="#">2</button></li>
+                <li {% if end>6 and end<10 %} style="opacity:.6;" {% endif %} class="page-item"><button name="8" class="page-link" href="#">3</button></li>
+                  <li {% if end>9 and end<13 %} style="opacity:.6;" {% endif %} class="page-item"><button name="9" class="page-link" href="#">4</button></li>
+                  <li {% if end>12 and end<16 %} style="opacity:.6;" {% endif %} class="page-item"><button name="12" class="page-link" href="#">5</button></li>
+                <li class="page-item"><button name="N" class="page-link"  href="#">Next</button></li>
+              </ul>
+            </nav>
+
+            </form>
+</div>
+        </div>
+    </div>
+
+<!--********************************VIEW AND CHOOSE A CLASS********************************-->
+    <div data-aos="fade-left" data-aos-offset="100"
+         data-aos-delay="50"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+         data-aos-anchor-placement="top-center" class="col-md-5">
+        <div class="tablet choose" >
+            <div class="tablet_inner" style="margin-top:10px;">
+                <form action="" method="POST">
+                    <h1 style="color:black;" class="course_details_name">{{view_course.name}}&nbsp </h1>
+
+ {% for class in view_course.c_class %}
+                    {% if class.type == "virtual" %}
+
+            <h1 class="course_details_name" style="color:purple;background-color:lightblue;text-align:center;"><i>{{class.name}}&nbsp&nbsp({{class.type}})</i></h1>
+            <button class="course_button" type="submit" value={{class.id}} name="watch_class"><strong>Watch Class</strong></button>
+<br><br>
+
+
+
+{% endif %}
+                {% endfor %}
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+
+
+
+
+{% endblock %}

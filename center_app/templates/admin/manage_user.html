@@ -1,0 +1,79 @@
+{% extends 'base_limit.html' %}
+{% block content %}
+
+<div style="position:relative;height:700px;width:100%;">
+
+    <div style="width:100%;position:absolute;top:0px;left:75px;display:flex;align-items: center;justify-content: center;flex-direction:column;">
+        <div><h1 style="margin-top:200px;color:black;font-size:2.5rem;width=100px;margin-left=50px;">Update User Information:</h1><hr></div>
+        <div class="container hideMe" style="width:300px;background-color:yellow;">
+{% if message=="updated" %}
+    User Information has been Updated
+            {% elif message=="delete_self" %}
+            You can't delete yourself
+    {% elif message=="deleted" %}
+    User has been Deleted
+    {% endif %}
+    </div>
+
+        <div style="width:30%;color:black;font-size:1.5rem;">
+            <form name="update_user_form" class="form" action="" method="POST" onSubmit="return confirm('Are you sure you wish to make that change?');">
+                {{ form.csrf_token }}
+                <div class="form-group">
+                  <label>Select User</label>
+                  <select class="form-control" name="update_user" onchange="document.update_user_form.submit();">
+                      {% for u in user_list %}
+                      {% if u_for_update.id==u.id %}
+                    <option value="{{u.id}}" selected>{{u.name}} ***  {{u.email}}</option>
+                      {% else %}
+                      <option value="{{u.id}}">{{u.name}} ***  {{u.email}}</option>
+                      {% endif %}
+                      {% endfor %}
+                  </select>
+                </div>
+
+
+
+                <div class="form-group">
+                    {{form.membership_status.label}}
+                    <select class="form-control" name="membership_status">
+                      {% if u_for_update.membership_status=="unpaid" %}
+                    <option value="unpaid" selected>Unpaid</option>
+                        {%else%}
+                      <option value="unpaid" >Unpaid</option>
+                        {% endif %}
+                        {% if u_for_update.membership_status=="on-site" %}
+                     <option value="on-site" selected>On Site</option>
+                        {% else %}
+                        <option value="on-site" >On Site</option>
+                        {% endif %}
+                        {% if u_for_update.membership_status=="virtual" %}
+                      <option value="virtual" selected>Virtual</option>
+                        {% else %}
+                        <option value="virtual" >Virtual</option>
+                        {% endif %}
+                  </select>
+
+
+                </div>
+                <div class="form-group">
+                    {{form.age.label}}
+                    {{ form.age(class="form-control", value=u_for_update.age)}}
+                </div>
+
+
+                <div style="text-align:center;">
+                    {{ form.update(class="btn-primary btn-lg") }} {{form.delete(class="btn-primary btn-lg")}}
+                </div>
+       </form>
+        <form action="" method="POST" onSubmit="return confirm('Are you sure you wish to change all users to virtual?');">
+        <hr style="color:pink;">
+                <div style="text-align:center;">
+                    {{ form.switch_to_virtual(class="btn-primary btn-lg") }}
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

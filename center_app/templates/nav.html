@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>The Royal Project</title>
+      <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Sigmar+One&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .nav-link{
+        font-family: 'Russo One', sans-serif;
+        font-size:15px;
+        }
+        .navbar-brand{
+        font-family: 'Russo One', sans-serif;
+        font-size:25px;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+        #start_now:hover{
+        background-color:#0d47a1!important;
+        color:white!important;
+        }
+        .right{
+        padding-top:20px;padding-bottom:20px;text-align:center;
+        }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+body {
+  margin: 0;
+  height: 1000px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.top {
+  margin: 0;
+  position: relative;
+  <!--width: 90%;-->
+  background-color: #aaa;
+  height: 300px;
+  opacity: 1;
+  text-align: center;
+  font-family: 'helvetica';
+  font-size: 80px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: -100px;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+/* The device with borders */
+.tablet {
+  position: relative;
+  width: 600px;
+  height: 750px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.tablet:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.tablet:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.tablet .content {
+  width: 600px;
+  height: 635px;
+  background: white;
+  margin: -1px;
+}
+
+
+
+.thumb {
+    width: 500px;
+    height: 400px;
+    margin: 70px auto;
+    perspective: 1000px;
+}
+
+.thumb a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("/static/shoes2.jpg");
+    background-size: 0, cover;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+
+.thumb:hover a {
+    transform: rotateX(80deg);
+    transform-origin: bottom;
+}
+.thumb a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background: inherit;
+    background-size: cover, cover;
+    background-position: bottom;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+.thumb a span {
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font: bold 12px/36px "Open Sans";
+    text-align: center;
+    transform: rotateX(-89.99deg);
+    transform-origin: top;
+    z-index: 1;
+}
+.thumb a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    opacity: 0.15;
+    transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+    transform-origin: bottom;
+}
+
+.thumb:hover a:before {
+    opacity: 1;
+    box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+    transform: rotateX(0) translateZ(-60px) scale(0.85);
+}
+
+
+#movetxt {
+    -webkit-animation: moving 10s infinite;
+    animation: moving 10s infinite;
+}
+@keyframes moving {
+    from {transform: translateX(0px);}
+    to {transform: translateX(2000px);}
+}
+.info_area1{
+        margin-top:50px;
+        margin-right:50px!important;
+        }
+.info_area1H{
+        font-size:3.5rem!important;
+        }
+.info_area1P{
+        font-size:1.5rem!important;
+        }
+
+The easiest way to do this is with 2 divs, 1 with the background and 1 with the text:
+
+#reg_pic_o {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+#reg_pic {
+  background: #CCC;
+  filter: alpha(opacity=60);
+  /* IE */
+  -moz-opacity: 0.6;
+  /* Mozilla */
+  opacity: 0.6;
+  /* CSS3 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+#reg_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    </style>
+    <!-- Custom styles for this template -->
+
+  <body>
+  <div class="wrapper" style="background-size:cover;background-image:url('logo4.png');background-attachment: fixed; background-repeat: no-repeat; width:100%;" >
+      <nav class="navbar navbar-expand-md bg-transparent fixed-top" >
+        <a class="navbar-brand" href="{{url_for('main.index')}}" style="font-size:2.5rem;"><img style="height:100px;border-radius:50%;" src="/static/logo2.png" > the ROYAL PROJECT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="display:flex;height:80px;" >
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('main.index')}}">HOME <span class="sr-only">(current)</span></a>
+            </li>
+             <li class="nav-item active">
+              <a class="nav-link" href="#">ABOUT US <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIEW COURSES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT US</a>
+            </li>
+
+              </ul>
+            <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+              <a class="nav-link right" href="#">HELLO </a>
+            </li>
+            {% if current_user.role==3 %}
+                <li class="nav-item">
+              <a class="nav-link right" href="{{url_for('main.admin')}}">VIEW PROFILE </a>
+            </li>
+               {% endif %}
+            <li class="nav-item">
+              <a class="nav-link right" href="{{url_for('auth.login')}}">VIEW PROFILE </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link right" href="{{url_for('auth.logout')}}">LOGOUT</a>
+            </li>
+            <li class="nav-item">
+             <button data-toggle="modal" data-target="#login" type="button" class="nav-link right highlight" style="border:none;background-color:#d0d6e2;width:200px;" onmouseover="this.style.color='white';this.style.background='#0d47a1';" onmouseout="this.style.color='gray';this.style.background='#d0d6e2';">LOGIN</button>
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('auth.register')}}" class="nav-link right highlight" style="border:none!important;background-color:#4285F4;width:200px;color:white;" onmouseover="this.style.color='white';this.style.background='#0d47a1';" onmouseout="this.style.color='white';this.style.background='#4285F4';" >REGISTER</a>
+            </li>
+           </ul>
+          <!--<form class="form-inline mt-2 mt-md-0">-->
+            <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+          <!--</form>-->
+        </div>
+      </nav>
+
+      {% block bod %}
+      {% endblock bod%}

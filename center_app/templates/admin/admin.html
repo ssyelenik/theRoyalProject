@@ -1,0 +1,30 @@
+{% extends 'base_limit.html' %}
+        {% block content %}
+        <div class="container" style="position:relative;color:black;width:100%;height:850px;">
+
+            <div style="position:absolute;top:150px;left:100px;display:flex;flex-wrap:wrap;">
+<h1 style="border-bottom:1px dotted black;margin-left:50px;">ADMIN Functions:</h1>
+                </div>
+            <div style="position:absolute;top:250px;left:100px;display:flex;flex-wrap:wrap;">
+              <a class="nav-link admin-button" href="{{url_for('auth.register')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Add User </a>
+
+
+              <a class="nav-link admin-button" href="{{url_for('main.manage_user')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Manage User </a>
+                </div>
+<div style="position:absolute;top:350px;left:100px;display:flex;flex-wrap:wrap;">
+              <a class="nav-link admin-button" href="{{url_for('main.add_course')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Add Course </a>
+
+              <a class="nav-link admin-button" href="{{url_for('main.manage_course')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Update Course </a>
+</div>
+            <div style="position:absolute;top:450px;left:100px;display:flex;flex-wrap:wrap;">
+              <a class="nav-link admin-button" href="{{url_for('main.add_class')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Add Class </a>
+
+              <a class="nav-link admin-button" href="{{url_for('main.manage_class')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Manage Class </a>
+</div>
+            <div style="position:absolute;top:550px;left:100px;display:flex;flex-wrap:wrap;">
+              <a class="nav-link admin-button" href="{{url_for('main.user_class')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Register User to Class </a>
+ <a class="nav-link admin-button" href="{{url_for('main.add_video_to_class')}}" onmouseover="this.style.background='none';this.style.color='black';" onmouseout="this.style.background='black';this.style.color='white';">Add Videos to a Virtual Class </a>
+                </div>
+        </div>
+
+        {% endblock content %}
