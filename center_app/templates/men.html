@@ -1,3 +1,31 @@
 {% extends 'base_limit.html' %}
         {% block content %}
+
+<div class="divisions-outer">
+    <div class="text-logo divisions-title">Men's Division</div>
+    <div class="divisions-gallery carousel slide tablet" data-ride="carousel">
+        <div  class="divisions-pics carousel-inner" style="background-color:black;">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="/static/men1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item" style="width:500px;position:relative;">
+                <img class="men-pic2 d-block w-100" src="/static/men2.jpg" alt="Second slide">
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="text-logo schedule-title">Men's Class Schedule</div>
+    <div class="schedule-outer tablet">
+        <img class="schedule-img d-block w-100" src="/static/schedule.jpg">
+    </div>
+</div>
+
         {% endblock content %}
