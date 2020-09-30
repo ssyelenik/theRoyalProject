@@ -10,7 +10,7 @@ migrate=flask_migrate.Migrate()
 login_mgr=flask_login.LoginManager()
 mail_mgr=flask_mail.Mail()
 
-def create_app(default_env="development"):
+def create_app(default_env="production"):
     from config import config
 
     from .views import main_blueprint
